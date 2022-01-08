@@ -71,20 +71,20 @@
         </div>
         <div class="popup " v-if="popup " @click.self="openPopup() ">
             <div class="index ">
-                <form @submit.prevent="addStudent() ">
+                <form @submit.prevent="addStudent()">
                     <div class="form-group w-100 ">
                         <label class="label-form ">FirsName</label>
-                        <input type="text " class="form-control " v-model="student.firstName " placeholder="firstName... " style="border-radius: 1.5rem; ">
+                        <input type="text" class="form-control" v-model="student.firstName" placeholder="firstName... " style="border-radius: 1.5rem; ">
                     </div>
                     <div class="form-group w-100 ">
                         <label class="label-form ">LastName</label>
-                        <input type="text " class="form-control " v-model="student.lastName " placeholder="lastName... " style="border-radius: 1.5rem; ">
+                        <input type="text" class="form-control " v-model="student.lastName" placeholder="lastName... " style="border-radius: 1.5rem; ">
                     </div>
                     <div class="form-group w-100 ">
                         <label class="label-form ">Date Birthday</label>
-                        <input type="date " class="form-control " v-model="student.dateBirthday " placeholder="dateBirthday... " style="border-radius: 1.5rem; ">
+                        <input type="date" class="form-control " v-model="student.dateBirthday " placeholder="dateBirthday... " style="border-radius: 1.5rem; ">
                     </div>
-                    <input type="hidden " v-model="student.deleted " value="0 ">
+                    <input type="hidden" v-model="student.deleted " value="0 ">
                     <a v-if="button_edit " @click.prevent="updateStudent " class="btn btn-outline-success mt-5 " style="border-radius: 1.5rem; ">Update</a>
                     <button v-else type="submit " class="btn btn-outline-primary mt-5 " style="border-radius: 1.5rem; ">Save</button>
                 </form>

@@ -19,6 +19,7 @@ new Vue({
     methods: {
         openPopup() {
             this.popup = !this.popup;
+            this.button_edit = false;
         },
         getStudents: function() {
             axios
@@ -37,9 +38,10 @@ new Vue({
                 .then(response => {
                     console.log(response.data);
                     this.openPopup();
+
                     alert('student Adding');
                     this.getStudents();
-                    this.student.fistName = '';
+                    this.student.firstName = "";
                     this.student.lastName = '';
                     this.student.dateBirthday = '';
 
@@ -70,7 +72,7 @@ new Vue({
                         this.popup = !this.popup;
                         alert("Student Update")
                         this.getStudents();
-                        this.student.fistName = '';
+                        this.student.firstName = '';
                         this.student.lastName = '';
                         this.student.dateBirthday = '';
                     }
